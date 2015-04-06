@@ -1,0 +1,106 @@
+getprop
+
+[persist.sys.usb.config]: [mtp,adb]
+
+Building ipxe requires isolinux.bin (from mkisolinux on arch)
+
+lsusb -t
+
+
+qemu -cdrom bin/asix.iso -bootp http://192.168.2.125/gtest/gtest.gpxe -usbdevice host:X:Y -net nic -net user -serial file:logfile.log
+
+buildino
+
+
+*black long big box
+EI-200TX G2
+S/N 23KF16168BR
+0090CCE5625D
+
+<6>[ 9645.716247] usb 2-1: new high-speed USB device number 5 using msm_hsusb_host
+<6>[ 9645.893707] usb 2-1: New USB device found, idVendor=0b95, idProduct=7720
+<6>[ 9645.893737] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+<6>[ 9645.893768] usb 2-1: Product: AX88x72A
+<6>[ 9645.893768] usb 2-1: Manufacturer: ASIX Elec. Corp.
+<6>[ 9645.893798] usb 2-1: SerialNumber: E5625D
+
+
+black short stick
+Digitus
+Fast Ethernet
+USB 2.0 Adapter
+
+<6>[ 9816.162170] usb 2-1: New USB device found, idVendor=07a6, idProduct=8515
+<6>[ 9816.162200] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+<6>[ 9816.162231] usb 2-1: Product: USB To LAN Converter
+<6>[ 9816.162231] usb 2-1: Manufacturer: ADMtek
+<6>[ 9816.162261] usb 2-1: SerialNumber: 0001
+
+
+Apple Adapter
+
+<6>[ 9905.027038] usb 2-1: new high-speed USB device number 7 using msm_hsusb_host
+<6>[ 9905.204681] usb 2-1: New USB device found, idVendor=05ac, idProduct=1402
+<6>[ 9905.204742] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+<6>[ 9905.204864] usb 2-1: Product: Apple USB Ethernet Adapter
+<6>[ 9905.204894] usb 2-1: Manufacturer: Apple Inc.      
+<6>[ 9905.204894] usb 2-1: SerialNumber: 09577C
+
+
+<6>[ 9947.747924] usb 2-1: new high-speed USB device number 8 using msm_hsusb_host
+<6>[ 9947.926818] usb 2-1: New USB device found, idVendor=05ac, idProduct=1402
+<6>[ 9947.926849] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+<6>[ 9947.926879] usb 2-1: Product: Apple USB Ethernet Adapter
+<6>[ 9947.926910] usb 2-1: Manufacturer: Apple Inc.      
+<6>[ 9947.926940] usb 2-1: SerialNumber: 1C3DC2
+
+# android as a keyboard
+https://github.com/pelya/android-keyboard-gadget
+https://github.com/pelya/android-keyboard-gadget/tree/master/hid-gadget-test/jni
+
+
+* usb mass storage usb gadget
+
+http://softwarebakery.com/projects/drivedroid
+
+# ipxe+usb
+# long willis filled 
+http://www.johnwillis.com/2014/03/pxe-booting-using-usb-to-ethernet-dongle.html
+http://forum.ipxe.org/showthread.php?tid=6151&page=2
+
+https://github.com/johntwillis/ipxe/wiki/USB-controller-and-Ethernet-device-driver-project
+https://github.com/johntwillis/ipxe/wiki/UNDI-support
+
+http://forum.ipxe.org/showthread.php?tid=6151&pid=10880#pid10880 # detailed ipxe usb boot info
+
+# dell USB 3.0 to Ethernet PXE Bboot...
+http://accessories.us.dell.com/sna/productdetail.aspx?c=us&l=en&s=gen&sku=443-bbbd#Overview
+
+* usb gadget 
+http://www.linux-usb.org/gadget/
+http://cateee.net/lkddb/web-lkddb/USB_G_MULTI.html
+
+http://wiki.cyanogenmod.org/w/Install_CM_for_jfltespr#Installing_a_custom_recovery_on_Galaxy_S4_.28Sprint.29
+
+Driver Download
+# AX88178
+# Building drivers for usb ethernet
+http://forum.xda-developers.com/showthread.php?t=2131825
+http://www.asix.com.tw/faq.php?op=faqdetail&PItemID=84
+http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=97
+
+
+http://click.xda-developers.com/api/click?format=go&jsonp=vglnk_14187998528378&key=f0a7f91912ae2b52e0700f73990eb321&libId=d8041457-0e69-40a7-85f0-6d1ea73c7e04&loc=http%3A%2F%2Fforum.xda-developers.com%2Fshowthread.php%3Ft%3D2131825&v=1&out=http%3A%2F%2Fwww.asix.com.tw%2FFrootAttach%2Fdriver%2FAX88772C_772B_772A_760_772_178_LINUX_DRIVER_v4.13.0_Source.tar.bz2&ref=https%3A%2F%2Fwww.google.com%2F&title=%5BDriver%5D%20Asix%20AX88772%20kernel%20module%20(USB%20Eth%E2%80%A6%20%7C%20AT%26T%2C%20Rogers%2C%20Bell%2C%20Telus%20Samsung%20Galaxy%20S%20III%20%7C%20XDA%20Forums&txt=http%3A%2F%2Fwww.asix.com.tw%2FFrootAttach%2Fd...Source.tar.bz2
+
+
+
+
+* installing android on x86
+
+http://forum.xda-developers.com/showthread.php?t=2703270
+
+* rebuilding cyanogen mod
+
+http://wiki.cyanogenmod.org/w/Doc:_integrated_kernel_building
+https://blog.afoolishmanifesto.com/posts/replacing-your-cyanogenmod-kernel-for-fun-and-profit/
+http://wiki.cyanogenmod.org/w/Build_for_jflte
